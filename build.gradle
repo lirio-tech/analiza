@@ -26,6 +26,23 @@ dependencies {
 	testImplementation 'io.projectreactor:reactor-test'
 }
 
+bootBuildImage {
+	imageName = "diegolirio/auction/analiza:0.0.1-SNAPSHOT"
+//	publish = true
+//	docker {
+//		publishRegistry {
+//			url = "http://172.2.3.5:9000/"
+//			username = "user"
+//			password = "pass"
+//		}
+//	}
+}
+
+//tasks.named("bootBuildImage") {
+//	builder = "mine/java-cnb-builder"
+//	runImage = "mine/java-cnb-run"
+//}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
