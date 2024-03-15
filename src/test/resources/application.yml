@@ -1,8 +1,5 @@
 spring:
-  profiles.active: default
+  profiles.active: test
   data:
     mongodb:
-      uri: ${MONGODB_URI:mongodb://localhost:27017/auctiondb}
-      #database: employee-service-blog
-      #host: employeemongodb
-      #port: 27017
+      uri: mongodb://localhost:27017/testdb

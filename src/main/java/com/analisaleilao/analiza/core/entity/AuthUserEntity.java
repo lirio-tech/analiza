@@ -10,19 +10,37 @@ public class AuthUserEntity {
     @Id private ObjectId id;
     private String email;
 
-    public ObjectId getId() {
-        return id;
+    private int codeAuth;
+
+    public AuthUserEntity() {}
+
+    public AuthUserEntity(String email) {
+        this.email = email;
     }
 
-    public void setId(ObjectId id) {
-        this.id = id;
+    public AuthUserEntity(String email, int codeAuth) {
+        this(email);
+        this.codeAuth = codeAuth;
+    }
+
+    public ObjectId getId() {
+        return id;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public int getCodeAuth() {
+        return codeAuth;
+    }
+
+    @Override
+    public String toString() {
+        return "AuthUserEntity{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", codeAuth=" + codeAuth +
+                '}';
     }
 }

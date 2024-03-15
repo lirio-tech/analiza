@@ -1,4 +1,4 @@
-package com.analisaleilao.analiza.core.port;
+package com.analisaleilao.analiza.core.port.in;
 
 import reactor.core.publisher.Mono;
 

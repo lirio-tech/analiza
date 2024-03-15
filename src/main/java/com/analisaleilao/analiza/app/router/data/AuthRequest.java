@@ -1,6 +1,12 @@
 package com.analisaleilao.analiza.app.router.data;
 
-public class LoginRequest {
+public class AuthRequest {
+
+    public AuthRequest() {}
+
+    public AuthRequest(String email) {
+        this.email = email;
+    }
 
     private String email;
 
