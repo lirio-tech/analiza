@@ -1,7 +1,7 @@
 
 spring:
   data.mongodb:
-    uri: mongodb+srv://yvee-dev:yvee-dev@cluster0.br4nt.mongodb.net
+    uri: ${MONGODB_URI}
     database: auction_db
 
   mail:
