@@ -1,0 +1,14 @@
+
+spring:
+  data.mongodb:
+    uri: mongodb+srv://yvee-dev:yvee-dev@cluster0.br4nt.mongodb.net
+    database: auction_db
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USER}
+    password: ${MAIL_PASS}
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: true

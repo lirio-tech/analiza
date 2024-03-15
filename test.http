@@ -1,0 +1,18 @@
+
+
+### Auth - Login
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "email" : "diegolirio.dl@gmail.com"
+}
+
+### Auth - Confirm
+POST http://localhost:8080/auth/confirm
+Content-Type: application/json
+
+{
+  "email" : "diegolirio.dl@gmail.com",
+  "code": "80324"
+}
