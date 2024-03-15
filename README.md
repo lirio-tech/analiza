@@ -16,4 +16,5 @@ sh ./docker/deploy/buildAndDeploy.sh
 - RouterFunction vs @controller
 - ObjectID MongoDB
 - SMTP
+- Handle Exceptions 
  

@@ -1,14 +1,12 @@
 package com.analisaleilao.analiza.core.usecases;
 
 import com.analisaleilao.analiza.core.dataproviders.repository.AuthUserRepository;
-import com.analisaleilao.analiza.core.entity.AuthUserEntity;
 import com.analisaleilao.analiza.core.port.in.LoginUserAuthenticatorConfirmInputPort;
 import com.analisaleilao.analiza.core.usecases.exceptions.AuthValidationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
-import reactor.core.scheduler.Schedulers;
 
 @Service
 public class LoginUserAuthenticatorConfirmUsecase implements LoginUserAuthenticatorConfirmInputPort {

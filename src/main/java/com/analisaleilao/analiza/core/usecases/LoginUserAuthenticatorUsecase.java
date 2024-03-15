@@ -1,7 +1,7 @@
 package com.analisaleilao.analiza.core.usecases;
 
 import com.analisaleilao.analiza.core.dataproviders.repository.AuthUserRepository;
-import com.analisaleilao.analiza.core.entity.AuthUserEntity;
+import com.analisaleilao.analiza.core.entity.AuthUser;
 import com.analisaleilao.analiza.core.port.out.EmailDataProvider;
 import com.analisaleilao.analiza.core.port.in.LoginUserAuthenticatorInputPort;
 import org.slf4j.Logger;
@@ -32,7 +32,7 @@ class LoginUserAuthenticatorUsecase implements LoginUserAuthenticatorInputPort {
         int codeAuth = random.nextInt(10_000, 99_999);
         emailDataProvider.send(email, codeAuth);
         return authUserRepository
-                .save(new AuthUserEntity(email, codeAuth))
+                .save(new AuthUser(email, codeAuth))
                 .map(s -> s.getId() != null)
                 .subscribeOn(Schedulers.boundedElastic());
     }

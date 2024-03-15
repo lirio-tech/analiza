@@ -5,20 +5,22 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(value = "authUsers")
-public class AuthUserEntity {
+public class AuthUser {
 
-    @Id private ObjectId id;
+    @Id
+    private ObjectId id;
     private String email;
 
     private int codeAuth;
 
-    public AuthUserEntity() {}
+    public AuthUser() {
+    }
 
-    public AuthUserEntity(String email) {
+    public AuthUser(String email) {
         this.email = email;
     }
 
-    public AuthUserEntity(String email, int codeAuth) {
+    public AuthUser(String email, int codeAuth) {
         this(email);
         this.codeAuth = codeAuth;
     }
